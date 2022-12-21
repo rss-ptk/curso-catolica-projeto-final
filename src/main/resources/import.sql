@@ -22,6 +22,6 @@ INSERT INTO categorias (id, nome, descricao, categoria_pai_id, url) values (15, 
 INSERT INTO usuarios (id, nome, email, senha, telefone) values (1, 'RODRIGO', 'rodrigo@mail.com', 'minhaSenha@forte2', '47 9 9988-7766');
 
 
-INSERT INTO anuncios (titulo, descricao, valor, localizacao, categoria, destaque, usuario_id) values ('Bicileta masculina', 'semi nova, ainda na garantia', 200.00, 'Blumenau', 3, 0, 1);
-INSERT INTO anuncios (titulo, descricao, valor, localizacao, categoria, destaque, usuario_id) values ('Radio positron usb/sd/aux', 'Radio positron usb/sd/aux', 110.00, 'iririu', 3, 1, 1);
+INSERT INTO anuncios (titulo, descricao, valor, localizacao, categoria, destaque, usuario_id) values ('Casa no Bucarein com 3 quartos', 'Ótima casa térrea, mobiliada, para moradia ou comercial. Com 1 suíte + 2 dormitórios, 160 m² privativo, 364,50 terreno. Vaga para 4 carros (1 coberta).', 850000, 'Joinville', 6, 1, 1);
+INSERT INTO anuncios (titulo, descricao, valor, localizacao, categoria, destaque, usuario_id) values ('Renault Sandero Expression 1.0 16V (flex)', 'Renault Sandero Expression 1.0 2010 . Carro completo, sem leilão ou sinistro, revisado e com garantia. Trabalhamos com todos os bancos para melhor lhe atender. Aceitamos seu carro como entrada com a melhor avaliação do mercado. Para maiores informações entre em contato. Alarme. Ar condicionado. CD e MP3 Player. Calotas. Desembaçador traseiro. Direção hidráulica. Limpador traseiro. Rádio. Travas elétricas. Vidros elétricos. Volante com regulagem de altura', 28900, 'Pirabeiraba', 2, 1, 1);
 INSERT INTO anuncios (titulo, descricao, valor, localizacao, categoria, destaque, usuario_id) values ('Teclado USB', 'Teclado USB', 15.00, 'iririu', 3, 1, 1);
