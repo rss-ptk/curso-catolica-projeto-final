@@ -23,7 +23,7 @@ public class Anuncio {
     @Column(name = "titulo", nullable = false)
     private String titulo;
 
-    @Column(name = "descricao", nullable = false)
+    @Column(name = "descricao", nullable = false, length = 1024)
     private String descricao;
 
     @Column(name = "valor", nullable = false)
