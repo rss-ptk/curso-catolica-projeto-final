@@ -38,4 +38,9 @@ public class HomeController {
         return "anuncioCadastrado";
     }
 
+    @GetMapping(value = "/anuncio-deletado")
+    public String anuncioDeleado() {
+        return "anuncioDeletado";
+    }
+
 }
