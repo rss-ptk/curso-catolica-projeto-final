@@ -12,6 +12,22 @@
         <div class="row mt-5">
 
             <div class="col-12">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a th:href="@{~/}">Início</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a th:text="${categoria.getNome()}"
+                                th:href="@{'~/anuncios/categoria/' + ${categoria.getId()} + '/' + ${categoria.url}}"></a>
+                        </li>
+                    </ol>
+                </nav>
+
+            </div>
+
+            <div class="col-12">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-6">
