@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:replace="~{/layouts/header :: head(metaTitle='Anuncio Cadastrado')}"></head>
+
+<body>
+
+    <div th:replace="~{/layouts/nav-top :: nav}"></div>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <div class="alert alert-success" role="alert">
+                    Anúncio cadastrado com sucesso!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="~{/layouts/footer :: footer}"></div>
+
+</body>
+
+</html>

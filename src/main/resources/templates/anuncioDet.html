@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:replace="~{/layouts/header :: head}"></head>
+
+<body>
+
+    <div th:replace="~{/layouts/nav-top :: nav}"></div>
+
+    <div class="container">
+
+        <div class="row mt-5">
+
+            <div class="col-12">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/700x350" class="img-fluid rounded-start" th:alt="${anuncioDet.getTitulo()}">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${anuncioDet.getTitulo()}"></h5>
+                                <h5 class="fs-3" th:text="'R$ ' + ${anuncioDet.getValor()}"></h5>
+                                <p class="card-text" th:text="${anuncioDet.getDescricao()}"></p>
+                                
+                                <p class="mt-5">
+                                    <small class="text-muted">anunciado por <th:block th:text="${usuarioDet.getNome()}"/> em <th:block th:text="${#dates.format(anuncioDet.getDataAnuncio(), 'dd/MM hh:mm')}"/></small><br>
+                                    contato: <th:block th:text="${usuarioDet.getEmail() + ' / ' + usuarioDet.getTelefone()}"/>
+                                </p>
+                                <p class="card-text"><small class="text-muted" th:text="${anuncioDet.getLocalizacao()}"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div th:replace="~{/layouts/footer :: footer}"></div>
+
+</body>
+
+</html>

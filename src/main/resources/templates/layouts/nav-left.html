@@ -1,0 +1,29 @@
+<div th:fragment="nav" class="col-sm-12 col-md-3">
+    <div class="card my-2">
+        <div class="card-header">
+            CATEGORIAS
+        </div>
+        <ul class="list-group list-group-flush">
+
+            <th:block th:each="menuPai: ${categoriasPai}">
+                <li class="list-group-item list-group-item-dark">
+                    <a th:text="${menuPai.nome}" th:href="@{'~/anuncios/categoria/' + ${menuPai.getId()} + '/' + ${menuPai.url}}" class="text-reset text-decoration-none"></a>
+                </li>
+                <li class="list-group-item">
+                    <ul class="list-group list-group-flush">
+                        <li th:each="menuFilho: ${categoriasFilho}"
+                            th:if="${menuFilho.categoriaPai.getId() == menuPai.getId()}" class="list-group-item">
+                            <a th:text="${menuFilho.nome}"
+                                th:href="@{'~/anuncios/categoria/' + ${menuFilho.getId()} + '/' + ${menuFilho.url}}"
+                                class="text-reset text-decoration-none"></a>
+                        </li>
+                    </ul>
+                </li>
+            </th:block>
+
+        </ul>
+    </div>
+    <div class="d-grid mt-3">
+        <a th:href="@{~/anuncios/cadastrar}" class="btn btn-success">Cadastrar Anúncio</a>
+    </div>
+</div>
