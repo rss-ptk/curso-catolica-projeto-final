@@ -7,9 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import com.example.classificados.entities.Anuncio;
 
 public interface AnuncioRepository extends JpaRepository<Anuncio, Long> {
-    List<Anuncio> findByCategoria(long categoriaId);
-    List<Anuncio> findByTituloContaining(String termo);
+    
+    List<Anuncio> findByCategoria(long categoriaId);    
+    
+    List<Anuncio> findByTituloContainingIgnoreCase(String termo);
     
     @Query("select i from Anuncio i where i.destaque = 1")
     List<Anuncio> findAllDestaques();
+
 }
