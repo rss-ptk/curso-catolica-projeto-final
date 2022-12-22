@@ -39,7 +39,7 @@
                                         </div>
                                         <div th:text="${anuncio.getLocalizacao()}" class="col-auto"></div>
                                     </div>
-                                    <p th:text="${anuncio.getDescricao()}" class="card-text"></p>
+                                    <p th:text="${anuncio.getTitulo()}" class="card-text"></p>
                                     <p class="card-text"><small
                                             th:text="${#dates.format(anuncio.getDataAnuncio(), 'dd/MM hh:mm')}"
                                             class="text-muted">30 mins atrás</small></p>
